@@ -1,0 +1,11 @@
+<h3>Shipping Prices</h3>
+
+<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+    <span>{{ shipping.type }}</span>
+
+    <!-- 
+        The Angular async pipeline returns the latest value from a stream of data 
+        and continues to do so for the lifecycle of a component 
+    -->
+    <span>{{ shipping.price | currency }}</span>
+</div>
